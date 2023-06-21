@@ -11,6 +11,23 @@
 @import "components/index";
 @import "pages/index";
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: $headers-font;
+  color: $gold-metallic;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.content {
+  margin-left: 200px;
 }
