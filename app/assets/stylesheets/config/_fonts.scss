@@ -4,14 +4,23 @@
 
 // Define fonts for body and headers
 $body-font: 'Marvel', sans-serif;
-$headers-font: "IRON MAN OF WAR 2 NCV";
-
 // To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
+@font-face {
+  font-family: "Marvel-Main";
+  src: url('MarvelRegular-Dj83.ttf')
 //   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
 //        font-url('FontFile.woff') format('woff'),
 //        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+}
+
+@font-face {
+  font-family: "Avengers";
+  src: url('AvengeroDisassembledRegular-nRvd4.ttf');
+}
+
+@font-face {
+  font-family: "Ironman";
+  src: url('IronManOfWar2Ncv-E85l.ttf');
+}
+
+$headers-font: "Ironman";

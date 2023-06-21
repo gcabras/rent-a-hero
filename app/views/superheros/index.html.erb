@@ -1,0 +1,32 @@
+<div class="container-supehero">
+  <h1>Available Heroes</h1>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="superheros-grid">
+        <% sum_latitude = 0 %>
+        <% sum_longitude = 0 %>
+        <% @superheros.each do |superhero| %>
+          <%= link_to superhero_path(superhero) do %>
+            <div class="hero-card"
+              style="background-image: url('<%= superhero.image_url %>')">
+              <h1><%= superhero.name %></h1>
+              <% sum_latitude += superhero.latitude %>
+              <% sum_longitude += superhero.longitude %>
+            </div>
+          <% end %>
+        <% end %>
+        <% average_latitude = sum_latitude / @superheros.size %>
+        <% average_longitude = sum_longitude / @superheros.size %>
+      </div>
+    </div>
+    <div class="col-lg-6">
+    <div class="map-style" style="width: 100%; height: 100vh; position: sticky;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+        data-map-average-latitude-value="<%= average_latitude %>"
+        data-map-average-longitude-value="<%= average_longitude %>"
+        ></div>
+    </div>
+  </div>
+</div>

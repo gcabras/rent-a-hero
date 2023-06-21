@@ -1,0 +1,16 @@
+.hero-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 8px;
+  height: 450px;
+  width: 300px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  box-shadow: $shadow-sm;
+}
+
+.hero-card:hover {
+  box-shadow: $shadow-xl;
+}
